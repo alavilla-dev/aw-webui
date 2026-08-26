@@ -1,6 +1,6 @@
 export default {
   app: {
-    name: 'ActivityWatch',
+    name: 'CEPEM Watch',
   },
   nav: {
     activity: 'Aktivität',
@@ -23,7 +23,7 @@ export default {
   },
   footer: {
     madeWith: 'Gemacht mit',
-    byDevs: 'von den ActivityWatch-Entwicklern',
+    byDevs: 'von den CEPEM Watch-Entwicklern',
     host: 'Host:',
     version: 'Version:',
     reportBug: 'Fehler melden',
@@ -81,7 +81,7 @@ export default {
       home: 'Startseite',
       activity: 'Aktivität ({hostname})',
       timeline: 'Zeitleiste',
-      help: 'Die Seite beim Öffnen von ActivityWatch oder Klick auf das Logo.',
+      help: 'Die Seite beim Öffnen von CEPEM Watch oder Klick auf das Logo.',
     },
     theme: {
       title: 'Design',
@@ -109,7 +109,7 @@ export default {
     },
     releaseNotification: {
       title: 'Auf neue Versionen prüfen',
-      help: 'Wenn aktiviert, prüft die Weboberfläche einmal täglich auf eine neue ActivityWatch-Version und zeigt einen Hinweis an.',
+      help: 'Wenn aktiviert, prüft die Weboberfläche einmal täglich auf eine neue CEPEM Watch-Version und zeigt einen Hinweis an.',
     },
     color: {
       title: 'Ersatzfarben verwenden',
@@ -171,30 +171,30 @@ export default {
   home: {
     note: 'Hinweis:',
     androidNote:
-      'ActivityWatch auf Android befindet sich in einem sehr frühen Entwicklungsstadium. Es gibt Fehler, aber wir arbeiten an Parität mit der Desktop-Version (probieren Sie sie!).',
-    greeting: 'Willkommen bei ActivityWatch',
+      'CEPEM Watch auf Android befindet sich in einem sehr frühen Entwicklungsstadium. Es gibt Fehler, aber wir arbeiten an Parität mit der Desktop-Version (probieren Sie sie!).',
+    greeting: 'Willkommen bei CEPEM Watch',
     intro1:
-      'Wir sind schon weit gekommen{android}, brauchen aber weiterhin Nutzer (wie Sie!), um ActivityWatch zu einem erfolgreichen Projekt zu machen. Wir freuen uns über Ihre Ideen zur Verbesserung.',
+      'Wir sind schon weit gekommen{android}, brauchen aber weiterhin Nutzer (wie Sie!), um CEPEM Watch zu einem erfolgreichen Projekt zu machen. Wir freuen uns über Ihre Ideen zur Verbesserung.',
     introAndroid: ' (besonders auf Android!)',
     intro3:
       'Als Entwickler können Sie mit einem Watcher, einer Visualisierung o. Ä. beitragen und im Forum teilen!',
-    thanks: 'Danke, dass Sie ActivityWatch nutzen!',
+    thanks: 'Danke, dass Sie CEPEM Watch nutzen!',
     surveyFill: 'Nehmen Sie an unserer Nutzerumfrage teil',
     surveySuffix: 'um mitzubestimmen, was als Nächstes kommt.',
     surveyOr: 'oder',
     voteForum: 'stimmen Sie im Forum für Funktionen ab',
     spreadTitle: 'Weiterempfehlen',
     spread1:
-      'Nichts motiviert mehr als Nutzer, die ActivityWatch ausprobieren. Teilen Sie es — wir machen es noch besser!',
+      'Nichts motiviert mehr als Nutzer, die CEPEM Watch ausprobieren. Teilen Sie es — wir machen es noch besser!',
     spreadReview: 'Geben Sie uns eine Bewertung auf',
     spreadVote: 'Stimmen Sie für uns ab auf',
     spreadFollow: 'Folgen Sie uns und teilen Sie auf',
     spreadStar: 'Geben Sie uns einen Stern auf',
     supportTitle: 'Unterstützen Sie uns!',
     subscribeIntro:
-      'The best way to keep ActivityWatch maintained is a subscription — from $5/month, every feature stays free, cancel anytime.',
-    subscribeCta: 'Support ActivityWatch →',
-    support1: 'Gefällt Ihnen ActivityWatch? Helfen Sie uns, Ihnen zu helfen — spenden Sie über:',
+      'The best way to keep CEPEM Watch maintained is a subscription — from $5/month, every feature stays free, cancel anytime.',
+    subscribeCta: 'Support CEPEM Watch →',
+    support1: 'Gefällt Ihnen CEPEM Watch? Helfen Sie uns, Ihnen zu helfen — spenden Sie über:',
     support2: 'Mehr Infos auf der',
     donationPage: 'Spendenseite der Website',
     otherDonationMethods: 'Weitere Methoden (inkl. Kryptowährung)',
@@ -211,11 +211,11 @@ export default {
     workingOnMiddle: 'und folgen Sie dem Projekt auf',
     workingOnSuffix: 'für Release-Hinweise.',
     landingHint:
-      'Welche Seite beim Öffnen von ActivityWatch erscheint (statt dieser), können Sie in den',
+      'Welche Seite beim Öffnen von CEPEM Watch erscheint (statt dieser), können Sie in den',
     supporterNudge: {
       message:
-        "You've been getting a lot out of ActivityWatch — would you consider supporting its development?",
-      support: 'Support ActivityWatch →',
+        "You've been getting a lot out of CEPEM Watch — would you consider supporting its development?",
+      support: 'Support CEPEM Watch →',
       notNow: 'Not now',
     },
   },

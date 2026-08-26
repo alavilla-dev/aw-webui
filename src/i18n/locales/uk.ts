@@ -1,6 +1,6 @@
 export default {
   app: {
-    name: 'ActivityWatch',
+    name: 'CEPEM Watch',
   },
   nav: {
     activity: 'Активність',
@@ -23,7 +23,7 @@ export default {
   },
   footer: {
     madeWith: 'Зроблено з',
-    byDevs: 'розробниками ActivityWatch',
+    byDevs: 'розробниками CEPEM Watch',
     host: 'Хост:',
     version: 'Версія:',
     reportBug: 'Повідомити про помилку',
@@ -81,7 +81,7 @@ export default {
       home: 'Головна',
       activity: 'Активність ({hostname})',
       timeline: 'Хронологія',
-      help: 'Сторінка при відкритті ActivityWatch або кліку на логотип у меню.',
+      help: 'Сторінка при відкритті CEPEM Watch або кліку на логотип у меню.',
     },
     theme: {
       title: 'Тема',
@@ -108,7 +108,7 @@ export default {
     },
     releaseNotification: {
       title: 'Перевірка нових версій',
-      help: 'Якщо ввімкнено, веб-інтерфейс раз на день перевіряє наявність нової версії ActivityWatch і показує підказку.',
+      help: 'Якщо ввімкнено, веб-інтерфейс раз на день перевіряє наявність нової версії CEPEM Watch і показує підказку.',
     },
     color: {
       title: 'Резервні кольори',
@@ -169,30 +169,30 @@ export default {
   home: {
     note: 'Примітка:',
     androidNote:
-      'ActivityWatch на Android на дуже ранній стадії. Будуть помилки, але ми працюємо над паритетом із десктопною версією (її варто спробувати!).',
-    greeting: 'Ласкаво просимо до ActivityWatch',
+      'CEPEM Watch на Android на дуже ранній стадії. Будуть помилки, але ми працюємо над паритетом із десктопною версією (її варто спробувати!).',
+    greeting: 'Ласкаво просимо до CEPEM Watch',
     intro1:
-      'Ми пройшли довгий шлях{android}, але нам ще потрібні користувачі (як ви!), щоб перетворити ActivityWatch на успішний проєкт. Будемо раді почути ваші ідеї щодо покращень.',
+      'Ми пройшли довгий шлях{android}, але нам ще потрібні користувачі (як ви!), щоб перетворити CEPEM Watch на успішний проєкт. Будемо раді почути ваші ідеї щодо покращень.',
     introAndroid: ' (особливо на Android!)',
     intro3:
       'Якщо ви розробник, допоможіть watcher-ом, візуалізацією чи іншим — і поділіться на форумі!',
-    thanks: 'Дякуємо, що користуєтеся ActivityWatch!',
+    thanks: 'Дякуємо, що користуєтеся CEPEM Watch!',
     surveyFill: 'Заповніть наше опитування',
     surveySuffix: 'щоб вплинути на те, що буде далі.',
     surveyOr: 'або',
     voteForum: 'проголосуйте за функції на форумі',
     spreadTitle: 'Поширюйте проєкт',
     spread1:
-      'Найкраща мотивація — коли ActivityWatch потрапляє до нових людей. Діліться — і ми зробимо його ще кращим!',
+      'Найкраща мотивація — коли CEPEM Watch потрапляє до нових людей. Діліться — і ми зробимо його ще кращим!',
     spreadReview: 'Залиште відгук на',
     spreadVote: 'Проголосуйте за нас на',
     spreadFollow: 'Слідкуйте та поширюйте в',
     spreadStar: 'Поставте зірку на',
     supportTitle: 'Підтримайте нас!',
     subscribeIntro:
-      'The best way to keep ActivityWatch maintained is a subscription — from $5/month, every feature stays free, cancel anytime.',
-    subscribeCta: 'Support ActivityWatch →',
-    support1: 'Подобається ActivityWatch? Допоможіть нам допомогти вам — пожертва через:',
+      'The best way to keep CEPEM Watch maintained is a subscription — from $5/month, every feature stays free, cancel anytime.',
+    subscribeCta: 'Support CEPEM Watch →',
+    support1: 'Подобається CEPEM Watch? Допоможіть нам допомогти вам — пожертва через:',
     support2: 'Детальніше — на',
     donationPage: 'сторінці пожертв на сайті',
     otherDonationMethods: 'Інші способи (зокрема криптовалюта)',
@@ -208,11 +208,11 @@ export default {
     devUpdates: 'новинами розробки',
     workingOnMiddle: 'та за проєктом на',
     workingOnSuffix: 'щоб читати нотатки до релізів.',
-    landingHint: 'Сторінку при відкритті ActivityWatch (замість цієї) можна змінити в',
+    landingHint: 'Сторінку при відкритті CEPEM Watch (замість цієї) можна змінити в',
     supporterNudge: {
       message:
-        "You've been getting a lot out of ActivityWatch — would you consider supporting its development?",
-      support: 'Support ActivityWatch →',
+        "You've been getting a lot out of CEPEM Watch — would you consider supporting its development?",
+      support: 'Support CEPEM Watch →',
       notNow: 'Not now',
     },
   },

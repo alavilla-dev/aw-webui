@@ -4,7 +4,7 @@
       button(type="button", class="close", @click="isPollVisible=false") &times;
       form
         p
-          | Hey there! You've been using ActivityWatch for a while. How likely are you to recommend it to a friend/colleague on a scale 1-10? (with 10 being the most likely)
+          | Hey there! You've been using CEPEM Watch for a while. How likely are you to recommend it to a friend/colleague on a scale 1-10? (with 10 being the most likely)
         div(class="radio-options")
           div(v-for="i in options", class="option-group")
             input(type="radio", :id="'option' + i", name="rating", :value="i", v-model="rating")
@@ -19,7 +19,7 @@
     b-alert(v-if="isPosFollowUpVisible", variant="info" show)
       button(type="button", class="close", @click="isPosFollowUpVisible=false") &times;
       p
-        | We're happy to hear you enjoy using ActivityWatch, but we can do better!
+        | We're happy to hear you enjoy using CEPEM Watch, but we can do better!
         br
         | To help us help you, here are a few things you can do:
       ul.small
@@ -40,7 +40,7 @@
 
     b-alert(v-if="isNegFollowUpVisible", variant="info" show)
       button(type="button", class="close", @click="isNegFollowUpVisible=false") &times;
-      | We are sorry to hear that you did not like ActivityWatch, but we want to improve! We would be very thankful if you helped us by:
+      | We are sorry to hear that you did not like CEPEM Watch, but we want to improve! We would be very thankful if you helped us by:
       ul
         li
           | Fill out the #[a(href="https://forms.gle/q2N9K5RoERBV8kqPA") feedback form].

@@ -6,7 +6,7 @@ div
     div
       b-form-checkbox(v-model="isEnabled" switch)
   small.text-muted
-    | When enabled, the web UI checks once per day for a new ActivityWatch release and shows a hint if one is available.
+    | When enabled, the web UI checks once per day for a new CEPEM Watch release and shows a hint if one is available.
 </template>
 
 <script lang="ts">

@@ -1,7 +1,7 @@
 // Simplified Chinese locale
 export default {
   app: {
-    name: 'ActivityWatch',
+    name: 'CEPEM Watch',
   },
   nav: {
     activity: '活动',
@@ -23,7 +23,7 @@ export default {
   },
   footer: {
     madeWith: '由',
-    byDevs: 'ActivityWatch 开发者制作',
+    byDevs: 'CEPEM Watch 开发者制作',
     host: '主机：',
     version: '版本：',
     reportBug: '报告问题',
@@ -83,11 +83,11 @@ export default {
       home: '首页',
       activity: '活动（{hostname}）',
       timeline: '时间线',
-      help: '打开 ActivityWatch 或点击顶部菜单 logo 时进入的页面。',
+      help: '打开 CEPEM Watch 或点击顶部菜单 logo 时进入的页面。',
     },
     language: {
       title: '语言',
-      help: '选择 ActivityWatch 的界面显示语言。',
+      help: '选择 CEPEM Watch 的界面显示语言。',
     },
     timelineDuration: {
       title: '默认时长',
@@ -95,7 +95,7 @@ export default {
     },
     releaseNotification: {
       title: '新版本通知',
-      help: '启用后，Web UI 每天最多检查一次 ActivityWatch 新版本，并在有可用版本时显示提示。',
+      help: '启用后，Web UI 每天最多检查一次 CEPEM Watch 新版本，并在有可用版本时显示提示。',
     },
     color: {
       title: '使用备用颜色',
@@ -166,30 +166,30 @@ export default {
   home: {
     note: '注意：',
     androidNote:
-      'ActivityWatch Android 版仍在积极开发中。此处展示的电脑使用数据完全独立于你的 Android 设备。',
-    greeting: '欢迎使用 ActivityWatch',
+      'CEPEM Watch Android 版仍在积极开发中。此处展示的电脑使用数据完全独立于你的 Android 设备。',
+    greeting: '欢迎使用 CEPEM Watch',
     intro1:
-      '我们已经走了很远{android}，但仍然需要用户（比如你！）提供反馈，帮助我们把 ActivityWatch 做成一个成功的项目。我们很想听听你的改进想法。',
+      '我们已经走了很远{android}，但仍然需要用户（比如你！）提供反馈，帮助我们把 CEPEM Watch 做成一个成功的项目。我们很想听听你的改进想法。',
     introAndroid: '（尤其是在 Android 上！）',
     intro3: '如果你是开发者，我们希望你能编写 watcher、可视化或其他东西，并在论坛上分享给我们！',
-    thanks: '感谢你使用 ActivityWatch！',
+    thanks: '感谢你使用 CEPEM Watch！',
     surveyFill: '填写我们的用户调查',
     surveySuffix: '来帮助决定接下来要做什么。',
     surveyOr: '或',
     voteForum: '在论坛上为功能投票',
     spreadTitle: '传播出去',
     spread1:
-      '没有什么比让 ActivityWatch 被更多用户使用更能激励我们。分享它会让我们把 ActivityWatch 做得更好！',
+      '没有什么比让 CEPEM Watch 被更多用户使用更能激励我们。分享它会让我们把 CEPEM Watch 做得更好！',
     spreadReview: '给我们点赞并评价：',
     spreadVote: '为我们投票：',
     spreadFollow: '关注我们并传播：',
     spreadStar: '给我们加星：',
     supportTitle: '支持我们！',
     subscribeIntro:
-      'The best way to keep ActivityWatch maintained is a subscription — from $5/month, every feature stays free, cancel anytime.',
-    subscribeCta: 'Support ActivityWatch →',
+      'The best way to keep CEPEM Watch maintained is a subscription — from $5/month, every feature stays free, cancel anytime.',
+    subscribeCta: 'Support CEPEM Watch →',
     support1:
-      '你喜欢 ActivityWatch 吗？它帮到你了吗？通过捐赠帮助我们继续帮助你！你可以通过以下方式捐赠：',
+      '你喜欢 CEPEM Watch 吗？它帮到你了吗？通过捐赠帮助我们继续帮助你！你可以通过以下方式捐赠：',
     support2: '更多信息请访问',
     donationPage: '网站上的捐赠页面',
     otherDonationMethods: '其他方式（包括加密货币）',
@@ -208,8 +208,8 @@ export default {
     landingHint: '你可以在',
     supporterNudge: {
       message:
-        "You've been getting a lot out of ActivityWatch — would you consider supporting its development?",
-      support: 'Support ActivityWatch →',
+        "You've been getting a lot out of CEPEM Watch — would you consider supporting its development?",
+      support: 'Support CEPEM Watch →',
       notNow: 'Not now',
     },
   },
