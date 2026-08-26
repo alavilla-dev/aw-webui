@@ -49,6 +49,14 @@ div(:class="{'fixed-top-padding': fixedTopMenu}")
           span.ml-2.align-middle(style="font-size: 1.0em; color: #000;") {{ $t('app.name') }}
 
       b-navbar-nav.ml-auto
+        // Admin: view another user's data (multi-user mode)
+        b-nav-item-dropdown(v-if="isAdmin")
+          template(slot="button-content")
+            div.d-inline.px-2.px-lg-1
+              icon(name="user-shield")
+              |  {{ viewingAs ? viewingAs : 'Admin' }}
+          b-dropdown-item(@click="selectUser(null)") — mis datos —
+          b-dropdown-item(v-for="u in users", :key="u", @click="selectUser(u)") {{ u }}
         b-nav-item-dropdown
           template(slot="button-content")
             div.d-inline.px-2.px-lg-1
@@ -87,6 +95,10 @@ div(:class="{'fixed-top-padding': fixedTopMenu}")
           div.px-2.px-lg-1
             icon(name="cog")
             | {{ $t('nav.settings') }}
+        b-nav-item(v-if="multiuser", @click="logout")
+          div.px-2.px-lg-1
+            icon(name="sign-out-alt")
+            |  Salir
 </template>
 
 <style lang="scss" scoped>
@@ -115,6 +127,8 @@ import 'vue-awesome/icons/project-diagram';
 import 'vue-awesome/icons/ellipsis-h';
 import 'vue-awesome/icons/mobile';
 import 'vue-awesome/icons/desktop';
+import 'vue-awesome/icons/user-shield';
+import 'vue-awesome/icons/sign-out-alt';
 
 import _ from 'lodash';
 
@@ -122,6 +136,7 @@ import { mapState } from 'pinia';
 import { useSettingsStore } from '~/stores/settings';
 import { useBucketsStore } from '~/stores/buckets';
 import { IBucket } from '~/util/interfaces';
+import { getClient, getAsUser, setAsUser, clearApiToken } from '~/util/awclient';
 
 export default {
   name: 'Header',
@@ -129,12 +144,40 @@ export default {
     return {
       activityViews: null,
       fixedTopMenu: this.$isAndroid,
+      multiuser: false,
+      isAdmin: false,
+      users: [],
+      viewingAs: getAsUser(),
     };
   },
   computed: {
     ...mapState(useSettingsStore, ['devmode']),
   },
+  methods: {
+    selectUser(username) {
+      setAsUser(username);
+      // Reload so every store refetches data in the selected user's scope.
+      window.location.reload();
+    },
+    logout() {
+      clearApiToken();
+      setAsUser(null);
+      this.$router.push('/login');
+    },
+  },
   mounted: async function () {
+    // Multi-user awareness: learn our role and (if admin) the list of users.
+    try {
+      const who = (await getClient().req.get('/api/0/whoami')).data;
+      this.multiuser = !!who.multiuser;
+      this.isAdmin = who.role === 'admin';
+      if (this.isAdmin) {
+        this.users = (await getClient().req.get('/api/0/users')).data || [];
+      }
+    } catch (e) {
+      // single-user server (no /whoami) or not authenticated yet; ignore
+    }
+
     const bucketStore = useBucketsStore();
     await bucketStore.ensureLoaded();
     const buckets: IBucket[] = bucketStore.buckets;

@@ -5,6 +5,8 @@ import { useSettingsStore } from '~/stores/settings';
 
 const API_TOKEN_QUERY_PARAM = 'token';
 const API_TOKEN_STORAGE_KEY = 'aw-api-token';
+const AS_USER_STORAGE_KEY = 'aw-as-user';
+const AS_USER_HEADER = 'X-AW-As-User';
 
 let _client: AWClient | null;
 
@@ -108,6 +110,7 @@ export function createClient(force?: boolean): AWClient {
       baseURL,
     });
     applyApiToken(_client, loadApiTokenFromBrowser());
+    applyAsUser(_client, getAsUser());
   } else {
     throw 'Tried to instantiate global AWClient twice!';
   }
@@ -147,4 +150,35 @@ export function setApiToken(token: string | null): void {
 
 export function clearApiToken(): void {
   setApiToken(null);
+}
+
+// --- Admin "view as" another user (X-AW-As-User header) ---
+
+export function getAsUser(): string | null {
+  return normalizeToken(getSessionStorage()?.getItem(AS_USER_STORAGE_KEY) ?? null);
+}
+
+function applyAsUser(client: { req: AxiosInstance }, username: string | null): void {
+  const defaults = client.req.defaults;
+  const headers = (defaults.headers as Record<string, Record<string, unknown>>) || {};
+  const commonHeaders = headers.common || {};
+  if (username) {
+    commonHeaders[AS_USER_HEADER] = username;
+  } else {
+    delete commonHeaders[AS_USER_HEADER];
+  }
+  headers.common = commonHeaders;
+  defaults.headers = headers as typeof defaults.headers;
+}
+
+export function setAsUser(username: string | null): void {
+  const u = normalizeToken(username);
+  if (u) {
+    getSessionStorage()?.setItem(AS_USER_STORAGE_KEY, u);
+  } else {
+    getSessionStorage()?.removeItem(AS_USER_STORAGE_KEY);
+  }
+  if (_client) {
+    applyAsUser(_client, u);
+  }
 }
