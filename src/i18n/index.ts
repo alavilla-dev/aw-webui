@@ -1,12 +1,14 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 import moment from 'moment';
+import 'moment/locale/es';
 import 'moment/locale/uk';
 import 'moment/locale/de';
 import 'moment/locale/ru';
 import 'moment/locale/zh-cn';
 
 import en from './locales/en';
+import es from './locales/es';
 import uk from './locales/uk';
 import de from './locales/de';
 import ru from './locales/ru';
@@ -14,15 +16,16 @@ import zhCN from './locales/zh-CN';
 
 Vue.use(VueI18n);
 
-export type AppLocale = 'en' | 'uk' | 'de' | 'ru' | 'zh-CN';
+export type AppLocale = 'es' | 'en' | 'uk' | 'de' | 'ru' | 'zh-CN';
 
-const SUPPORTED: AppLocale[] = ['en', 'uk', 'de', 'ru', 'zh-CN'];
+const SUPPORTED: AppLocale[] = ['es', 'en', 'uk', 'de', 'ru', 'zh-CN'];
 
 export function isAppLocale(value: string | null | undefined): value is AppLocale {
   return SUPPORTED.includes(value as AppLocale);
 }
 
 const HTML_LANG: Record<AppLocale, string> = {
+  es: 'es',
   en: 'en',
   uk: 'uk',
   de: 'de',
@@ -35,6 +38,7 @@ function detectBrowserLocale(): AppLocale | null {
     return null;
   }
   const lang = (navigator.language || '').toLowerCase();
+  if (lang.startsWith('es')) return 'es';
   if (lang.startsWith('uk')) return 'uk';
   if (lang.startsWith('de')) return 'de';
   if (lang.startsWith('ru')) return 'ru';
@@ -52,10 +56,12 @@ export function getInitialLocale(): AppLocale {
   } catch {
     /* ignore */
   }
-  return detectBrowserLocale() ?? 'en';
+  // CEPEM Watch defaults to Spanish out of the box.
+  return detectBrowserLocale() ?? 'es';
 }
 
 const MOMENT_LOCALE: Record<AppLocale, string> = {
+  es: 'es',
   en: 'en',
   uk: 'uk',
   de: 'de',
@@ -68,7 +74,7 @@ const initialLocale = getInitialLocale();
 export const i18n = new VueI18n({
   locale: initialLocale,
   fallbackLocale: 'en',
-  messages: { en, uk, de, ru, 'zh-CN': zhCN },
+  messages: { es, en, uk, de, ru, 'zh-CN': zhCN },
   silentTranslationWarn: process.env.NODE_ENV === 'production',
 });
 

@@ -87,6 +87,10 @@ div(:class="{'fixed-top-padding': fixedTopMenu}")
             icon(name="project-diagram")
             | {{ $t('nav.graph') }}
 
+        b-nav-item(to="/screenshots")
+          div.px-2.px-lg-1
+            icon(name="camera")
+            | {{ $t('nav.screenshots') }}
         b-nav-item(to="/buckets")
           div.px-2.px-lg-1
             icon(name="database")
@@ -129,6 +133,7 @@ import 'vue-awesome/icons/mobile';
 import 'vue-awesome/icons/desktop';
 import 'vue-awesome/icons/user-shield';
 import 'vue-awesome/icons/sign-out-alt';
+import 'vue-awesome/icons/camera';
 
 import _ from 'lodash';
 

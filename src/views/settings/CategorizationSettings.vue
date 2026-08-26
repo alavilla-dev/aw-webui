@@ -3,8 +3,6 @@ div
   p.mb-2
     | {{ $t('settings.categorization.rulesHelp') }}
   p
-    | {{ $t('settings.categorization.forumIntro') }}
-    |  #[a(href="https://forum.activitywatch.net/c/projects/category-rules") {{ $t('settings.categorization.forum') }}].
     | {{ $t('settings.categorization.docsIntro') }}
     |  #[a(href="https://docs.activitywatch.net/en/latest/features/categorization.html") {{ $t('settings.categorization.documentation') }}].
 

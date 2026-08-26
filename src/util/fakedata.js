@@ -3,9 +3,9 @@ export const window_events = [
     duration: 32.1 * 60,
     data: {
       app: 'Firefox',
-      title: 'ActivityWatch/activitywatch: Track how you spend your time - Mozilla Firefox',
-      url: 'https://github.com/ActivityWatch/activitywatch',
-      $category: ['Work', 'Programming', 'ActivityWatch'],
+      title: 'CEPEM Watch: Track how you spend your time - Mozilla Firefox',
+      url: 'https://github.com/alavilla-dev/cepem-watch',
+      $category: ['Work', 'Programming', 'CEPEM Watch'],
     },
   },
   {
@@ -57,16 +57,16 @@ export const window_events = [
     duration: 48.2 * 60,
     data: {
       app: 'Terminal',
-      title: 'vim ~/code/activitywatch/aw-server/aw-webui/src',
-      $category: ['Work', 'Programming', 'ActivityWatch'],
+      title: 'vim ~/code/cepem-watch/aw-server/aw-webui/src',
+      $category: ['Work', 'Programming', 'CEPEM Watch'],
     },
   },
   {
     duration: 12.6 * 60,
     data: {
       app: 'Terminal',
-      title: 'bash ~/code/activitywatch',
-      $category: ['Work', 'Programming', 'ActivityWatch'],
+      title: 'bash ~/code/cepem-watch',
+      $category: ['Work', 'Programming', 'CEPEM Watch'],
     },
   },
   {

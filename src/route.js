@@ -27,6 +27,7 @@ const Dev = () => import('./views/Dev.vue');
 const Graph = () => import('./views/Graph.vue');
 const NotFound = () => import('./views/NotFound.vue');
 const Login = () => import('./views/Login.vue');
+const Screenshots = () => import('./views/Screenshots.vue');
 
 Vue.use(VueRouter);
 
@@ -61,6 +62,7 @@ const router = new VueRouter({
       ],
     },
     { path: '/buckets', component: Buckets },
+    { path: '/screenshots', component: Screenshots },
     { path: '/buckets/:id', component: Bucket, props: true },
     { path: '/timeline', component: Timeline, meta: { fullContainer: true } },
     { path: '/trends', component: Trends, meta: { fullContainer: true } },

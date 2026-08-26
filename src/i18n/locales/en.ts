@@ -20,6 +20,11 @@ export default {
     graph: 'Graph',
     rawData: 'Raw Data',
     settings: 'Settings',
+    screenshots: 'Screenshots',
+  },
+  screenshots: {
+    empty: 'No screenshots captured yet.',
+    count: 'screenshots',
   },
   footer: {
     madeWith: 'Made with',
@@ -53,6 +58,7 @@ export default {
     languageDe: 'Deutsch',
     languageRu: 'Русский',
     languageZhCN: '简体中文',
+    languageEs: 'Español',
     rangeTo: 'to',
   },
   notFound: {

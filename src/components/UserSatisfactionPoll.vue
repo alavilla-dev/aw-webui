@@ -24,28 +24,16 @@
         | To help us help you, here are a few things you can do:
       ul.small
         li
-          | Support us on #[a(href="https://www.patreon.com/erikbjare") Patreon] or #[a(href="https://opencollective.com/activitywatch") Open Collective] (or by #[a(href="https://activitywatch.net/donate/") other donation methods]).
+          | Tell your colleagues!
         li
-          | Tell your friends and colleagues!
-        li
-          | Post about it on social media, we are on #[a(href="https://twitter.com/ActivityWatchIt") Twitter] and #[a(href="https://www.facebook.com/ActivityWatch") Facebook].
-        //li
-          | Fill out the #[a(href="https://forms.gle/q2N9K5RoERBV8kqPA") feedback form].
-        li
-          | Rate us on #[a(href="https://alternativeto.net/software/activitywatch/about/") AlternativeTo] and #[a(href="https://play.google.com/store/apps/details?id=net.activitywatch.android") Google Play Store].
-        li
-          | Join our #[a(href="https://discord.gg/vDskV9q") Discord server].
-        li
-          | Sign up for the #[a(href="http://eepurl.com/cTU6QX") newsletter] (we rarely send anything).
+          | Send us feedback or ideas on #[a(href="https://github.com/alavilla-dev/cepem-watch/issues" target="_blank" rel="noopener noreferrer") GitHub].
 
     b-alert(v-if="isNegFollowUpVisible", variant="info" show)
       button(type="button", class="close", @click="isNegFollowUpVisible=false") &times;
       | We are sorry to hear that you did not like CEPEM Watch, but we want to improve! We would be very thankful if you helped us by:
       ul
         li
-          | Fill out the #[a(href="https://forms.gle/q2N9K5RoERBV8kqPA") feedback form].
-        li
-          | Vote for new features on the #[a(href="https://forum.activitywatch.net/c/features") forum].
+          | Telling us what went wrong on #[a(href="https://github.com/alavilla-dev/cepem-watch/issues" target="_blank" rel="noopener noreferrer") GitHub].
 </template>
 
 <style scoped>
