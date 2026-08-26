@@ -125,3 +125,26 @@ export function getClient(): AWClient {
   }
   return _client;
 }
+
+// --- CEPEM Watch multi-user: token login helpers ---
+
+export function hasApiToken(): boolean {
+  return getStoredApiToken() !== null;
+}
+
+// Persist (or clear) the API token and apply it to the live client immediately.
+export function setApiToken(token: string | null): void {
+  const t = normalizeToken(token);
+  if (t) {
+    persistApiToken(t);
+  } else {
+    getSessionStorage()?.removeItem(API_TOKEN_STORAGE_KEY);
+  }
+  if (_client) {
+    applyApiToken(_client, t);
+  }
+}
+
+export function clearApiToken(): void {
+  setApiToken(null);
+}

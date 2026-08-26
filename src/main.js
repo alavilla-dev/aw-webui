@@ -81,7 +81,7 @@ Vue.prototype.$isAndroid = process.env.VUE_APP_ON_ANDROID;
 // Create an instance of AWClient as this.$aw
 // NOTE: needs to be created before the Vue app is created,
 //       since stores rely on it having been run.
-import { createClient, getClient, configureClient } from './util/awclient';
+import { createClient, getClient, configureClient, clearApiToken } from './util/awclient';
 createClient();
 
 // Setup Vue app
@@ -96,6 +96,21 @@ new Vue({
 
 // Set the $aw global
 Vue.prototype.$aw = getClient();
+
+// CEPEM Watch multi-user: on 401 (missing/invalid token), drop the token and
+// send the user to the login screen. Harmless in single-user mode (no 401s).
+getClient().req.interceptors.response.use(
+  response => response,
+  error => {
+    if (error.response && error.response.status === 401) {
+      clearApiToken();
+      if (router.currentRoute.path !== '/login') {
+        router.push({ path: '/login', query: { redirect: router.currentRoute.fullPath } });
+      }
+    }
+    return Promise.reject(error);
+  }
+);
 
 // Must be run after vue init since it relies on the settings store
 configureClient();
